@@ -29,7 +29,7 @@ public class FormatAction extends AnAction {
         if (StringUtils.isBlank(selectedText)) {
             return;
         }
-        String replaceStr = TransitionUtils.spacingText(RegexExpressionUtils.replace(selectedText, "\\f|\\r|\\t", ""));
+        String replaceStr = TransitionUtils.spacingText(TransitionUtils.replace(selectedText, "\\f|\\r|\\t", ""));
         WriteCommandAction.runWriteCommandAction(e.getData(PlatformDataKeys.PROJECT), () -> editor.getDocument().replaceString(selectionModel.getSelectionStart(), selectionModel.getSelectionEnd(), replaceStr));
 
     }

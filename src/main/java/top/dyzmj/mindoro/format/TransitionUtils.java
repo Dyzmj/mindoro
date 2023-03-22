@@ -63,4 +63,9 @@ public class TransitionUtils {
 
         return text;
     }
+
+    public static String replace(String str, String regex, String newStr) {
+        return Pattern.compile(regex).matcher(str).replaceAll(newStr);
+    }
+
 }

@@ -8,6 +8,7 @@ import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
 import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
+import top.dyzmj.mindoro.common.EditorBaseIcons;
 
 import java.util.Objects;
 
@@ -18,6 +19,11 @@ import java.util.Objects;
  * @date 2023/03/22
  */
 public class FormatAction extends AnAction {
+
+    public FormatAction(){
+        super(EditorBaseIcons.DEFAULT_ICON);
+    }
+
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Editor editor = e.getData(PlatformDataKeys.EDITOR);
